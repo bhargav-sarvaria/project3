@@ -22,7 +22,7 @@ event = {
         }
     ]
 }
-
+print('Starting watcher...')
 # Continuously poll the S3 bucket for new files
 while True:
     # Get a list of objects in the S3 bucket
