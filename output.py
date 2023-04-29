@@ -21,8 +21,8 @@ print('Polling started...')
 
 # Poll the S3 bucket every 60 seconds and download new objects
 while True:
-    # Wait for 60 seconds before checking again
-    time.sleep(60)
+    # Wait for 5 seconds before checking again
+    time.sleep(5)
 
     # Get the new list of object keys
     response = s3.list_objects_v2(Bucket=bucket_name)
