@@ -43,6 +43,6 @@ while True:
             InvocationType='Event',
             Payload=json.dumps(event)
         )
-
-    # Wait for 1 minute before polling again
-    time.sleep(30)
+    else:
+        # Wait for 1 minute before polling again
+        time.sleep(10)
