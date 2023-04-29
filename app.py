@@ -1,5 +1,6 @@
 import boto3
-
+import json
+import time
 # Set up the S3 client
 s3_client = boto3.client('s3')
 
@@ -35,6 +36,7 @@ while True:
         # Update the Lambda function event with the name of the latest object
         event['Records'][0]['s3']['object']['key'] = latest_object
 
+        print('Triggering lamda function!')
         # Invoke the Lambda function with the updated event
         response = lambda_client.invoke(
             FunctionName=lambda_function_name,
